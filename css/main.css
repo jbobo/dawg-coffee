@@ -1,1 +1,112 @@
 /* Your stylesheet goes here */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,300);
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+* { 
+	font-family: 'Lato', Helvetica Neue, Helvetica, sans-serif; 
+
+	font-size: 16px;
+
+	font-weight: 300;
+
+	background-color: #E9EAEE;
+}
+
+h2 {
+	background-color: #BC6025; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Raleway", Helvetica Neue, Helvetica, sans-serif;
+}
+
+svg {
+	height: 1em;
+	margin-left: 15px;
+	fill: white;
+	display: inline;
+}
+.nav {
+	background-color: #181C22;
+	color: white;
+	font-size:16px;
+	float: left;
+}
+a {
+	padding: 0.5em;
+	font-variant: small-caps;
+}
+a:hover, svg:hover {
+	text-decoration: none;
+	color: #D87E28;
+	fill: #D87E28;
+}
+a:link {
+	text-decoration:none;
+}
+li {
+	display: inline;
+}
+#top{
+	padding-top:3em;
+}
+
+p.headerarea{
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	
+	*{
+		font-size: 20px;
+	}
+
+	h2{
+		margin-bottom: 1em;
+		/* padding-bottom: 1em; */  /* not sure if this should be padding or margin, instructions just say "have a blank space below them equal to the height of the current font." */ 
+		text-align: center;
+	}
+
+	.nav{
+		background-color: rgba(24,28,34, 0.8); 
+	}
+
+	a{
+		padding-left: 1em; 
+		padding-right: 1em;
+	}
+	
+	#top {
+	padding-top:3em;
+	background: url(file:///home/Ned/code/dawg-coffee/img/background-sm.jpg) 	 no-repeat top center;
+	min-height: 550px;
+	}
+	h1.headerarea, p.headerarea {
+	text-align: right;
+	color: white;
+	background-color: transparent; 
+	display: inherit;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#top{
+		background: url(file:///home/Ned/code/dawg-coffee/img/background-md.jpg) no-repeat top center;
+	}
+	h1.headerarea{
+		font-size: 4em;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#top{
+		background: url(file:///home/Ned/code/dawg-coffee/img/background-md.jpg) no-repeat top center;
+	}
+}
+
+
