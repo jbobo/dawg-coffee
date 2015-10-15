@@ -6,7 +6,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,300);
 
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
-
 * { 
 	font-family: 'Lato', Helvetica Neue, Helvetica, sans-serif; 
 
@@ -20,28 +19,40 @@
 h2 {
 	background-color: #BC6025; 
 }
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Raleway", Helvetica Neue, Helvetica, sans-serif;
 }
-
-svg {
-	height: 1em;
-	margin-left: 15px;
-	fill: white;
-	display: inline;
+ul{
+	padding-left: 0px;
+	padding-right: 0px;
 }
-.nav {
+svg.top {
+	height: 1em;
+	fill: white;
+}
+li.first{
+	padding-left: 15px;
+}
+nav, div.nav, ul, li, a, svg.top {
 	background-color: #181C22;
 	color: white;
 	font-size:16px;
 	float: left;
+	display: inline;
+	position: fixed top;
+	margin-bottom: 0px;
 }
-a {
+div.container{
+	padding-left: 0px;
+}
+nav{
+	width: 100%;
+}
+li {
 	padding: 0.5em;
 	font-variant: small-caps;
 }
-a:hover, svg:hover {
+a:hover, svg.top:hover {
 	text-decoration: none;
 	color: #D87E28;
 	fill: #D87E28;
@@ -49,17 +60,12 @@ a:hover, svg:hover {
 a:link {
 	text-decoration:none;
 }
-li {
-	display: inline;
-}
 #top{
 	padding-top:3em;
 }
-
 p.headerarea{
 	display: none;
 }
-
 @media screen and (min-width: 768px) {
 	
 	*{
@@ -67,46 +73,132 @@ p.headerarea{
 	}
 
 	h2{
-		margin-bottom: 1em;
+		padding-bottom: 1em;
 		/* padding-bottom: 1em; */  /* not sure if this should be padding or margin, instructions just say "have a blank space below them equal to the height of the current font." */ 
 		text-align: center;
 	}
 
-	.nav{
+	nav{
 		background-color: rgba(24,28,34, 0.8); 
 	}
 
-	a{
+	li{
 		padding-left: 1em; 
 		padding-right: 1em;
 	}
 	
 	#top {
-	padding-top:3em;
-	background: url(file:///home/Ned/code/dawg-coffee/img/background-sm.jpg) 	 no-repeat top center;
-	min-height: 550px;
+		padding-top:3em;
+		background: url(../img/background-sm.jpg) 	 no-repeat top center;
+		min-height: 550px;
 	}
 	h1.headerarea, p.headerarea {
-	text-align: right;
-	color: white;
-	background-color: transparent; 
-	display: inherit;
+		text-align: right;
+		color: white;
+		background-color: transparent; 
+		display: inherit;
 	}
 }
-
 @media screen and (min-width: 992px) {
 	#top{
-		background: url(file:///home/Ned/code/dawg-coffee/img/background-md.jpg) no-repeat top center;
+		background: url(../img/background-md.jpg) no-repeat top center;
 	}
 	h1.headerarea{
 		font-size: 4em;
 	}
 }
-
 @media screen and (min-width: 1200px) {
 	#top{
-		background: url(file:///home/Ned/code/dawg-coffee/img/background-md.jpg) no-repeat top center;
+		background: url(../img/background-md.jpg) no-repeat top center;
 	}
 }
-
-
+svg.headline, svg.hours, svg.location, svg.contact{
+	height: 1.5em;
+	fill: #D87E28;
+	margin-left:auto; 
+	margin-right:auto; 
+	display: block;
+	margin-bottom: 1em;
+}
+p.hours2{
+	margin-bottom:0em;
+}
+div.hours, div.location, div.contact{
+	margin-bottom:3em;
+}
+a.location{
+	float: none;
+	margin-left:auto; 
+	margin-right:auto; 
+	display: block;
+	background-color: transparent;
+	width: 250px;
+}
+p.hours{
+	text-align: center;
+}
+p.headline{
+	font-style: italic;
+	text-align: center;
+	font-size: 1.25em;
+	padding-bottom: 1em;
+}
+section.container{
+	margin-left:0px;
+	margin-right:0px;
+	width:100%;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+a.contact{
+	background-color: transparent;
+	width: 100%;
+	text-align: center;
+	color: rgb(30%,25%,60%);
+	text-decoration: none;
+	font-size: 1.25em;
+}
+i.contact{
+	color: black;
+}
+div.info{
+	background-color: #dbdce3;
+}
+.clear{
+	background-color: transparent;
+}
+img.location{
+	border-radius: 5px;
+}
+h1.menu{
+	text-align: center;
+	color: #D87E28;
+}
+h2.menu{
+	background-color: transparent;
+	text-align: left;
+	padding-bottom: 0em;
+}
+dd{
+	font-style: italic;
+	font-size: 1.25em;
+	padding-left: 1em;
+}
+@media screen and (max-width: 767px) {
+	svg.headline{
+		display: none;
+	}
+	/* I know this is bad form to do when we are designing a website from teh smallest form factor up, but I was having difficulty getting the icon to properly appear and dissapear when I made it display: none; by default and switched it to display: block; in the min-width: 768px; media query. I even added !important, and couldn't get it to appear on larger screen widths. -Ned */
+	p.headline, dd{
+		text-align: left;
+		font-size: 1em;
+	}
+	section.container{
+		padding-top: 0em;
+		padding-bottom: 0em;
+	}
+	a.contact{
+		font-size: 1em;
+	}
+	
+}
